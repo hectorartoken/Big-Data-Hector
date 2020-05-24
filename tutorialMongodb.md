@@ -1,4 +1,5 @@
 # MongoDB
+![alt text](https://github.com/hectorartoken/Big-Data-Hector/blob/master/Images/MongoDB.png "MongoDB")
 ## How to install it?
 1. Open the link [MongoDB](https://www.mongodb.com/es)
 2. Click in **software**, then **community server**.
