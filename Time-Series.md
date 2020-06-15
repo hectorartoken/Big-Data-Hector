@@ -22,9 +22,9 @@ We can divide the Time Series Databases in 3 categories:
 
 ## Why use Time-Series?
 
-Predict future — Make informed predictions about future events, observe real-time changes, and capture historical anomalies.
+**Predict future**: Make informed predictions about future events, observe real-time changes, and capture historical anomalies.
 
-Understand past — Understand past data with a purpose-built database.
+**Understand past**: Understand past data with a purpose-built database.
 
 ## Who uses Time Series?
 
@@ -76,12 +76,13 @@ Comparation between 5 Time-Series databases:
 
 Databases/Attributes | Amazon Timestream            | DataStax                      | InfluxDB                          | Prometheus                        | QuasarDB                          |
 -------------------- | :--------------------------: | :---------------------------: | :-------------------------------: | :-------------------------------: | --------------------------------: |                         
-Market Segemnet      | Mid-Market(56.3% of reviews) | Enterprise (61.5% of reviews) | Small-Business (52.4% of reviews) | Small-Business (47.4% of reviews) | Small-Business (33.3% of reviews) | 
-Unique Categories    | Amazon Timestream is categorized as Database as a Service (DBaaS) | DataStax is categorized as Data Replication, Database Monitoring, Database as a Service (DBaaS), Graph Databases, and Key-Value Stores | InfluxDB has no unique categories | Prometheus is categorized as Database Management Systems (DBMS) and Container Monitoring | QuasarDB has no unique categories |
-
-
-
-
+**Market Segemnet**  | Mid-Market(56.3% of reviews) | Enterprise (61.5% of reviews) | Small-Business (52.4% of reviews) | Small-Business (47.4% of reviews) | Small-Business (33.3% of reviews) | 
+**Unique Categories** | Amazon Timestream is categorized as Database as a Service (DBaaS) | DataStax is categorized as Data Replication, Database Monitoring, Database as a Service (DBaaS), Graph Databases, and Key-Value Stores | InfluxDB has no unique categories | Prometheus is categorized as Database Management Systems (DBMS) and Container Monitoring | QuasarDB has no unique categories |
+**What is it?** | Amazon Timestream is a fast, scalable, fully managed time series database service for IoT and operational applications that makes it easy to store and analyze trillions of events per day at 1/10th the cost of relational databases. | DataStax helps companies compete in a rapidly changing world where expectations are high and new innovations happen daily. | InfluxDB is the open source time series database | An open-source service monitoring system and time series database. | QuasarDB is a high-performance, distributed time series database that seamlessly combines in-memory capabilities with reliable storage. It’s built on a vertical approach with a single software package that provides storage, distribution, standardization and analysis | 
+**Pricing** | Free Trial Unavailable | Free Trial Unavailable | Free Trial Unavailable | Free Trial Unavailable | Free Trial Unavailable |
+**Ease of Use** | 8.0 | 7.9 | 9.0 | 7.8 | 5.0 |
+**Case of Use** | DevOps, Applications of IoT, Application Monitoring, Industrial Telemetry | Hybrid and Multi-cloud, Microservices, System Modernization, Streaming IoT, Analytics | Deep insights and analytics | Storage, visualizations, Integrations with Docker, HaProxy, StatsD and JMX metrics | import and export databases, Remote connectors with Grafana, Kafka, Spark, Excel and  Prometehus, APIs consults |
+**Supoort** | Amazon web service | Apache Cassandra | Open Source | Open Source or Cloud Native | SQL |
 
 
 
