@@ -57,7 +57,7 @@ The speed of an in-memory database is made possible by lack of translation and c
 An in-memory database system can also act as an read-only analytic database that stores historical data on metrics for business intelligence (BI) applications. This eliminates data indexing, which can reduce IT costs. Multi-core servers, 64-bit computing and lower RAM prices have made in-memory analytics more common.
 
 
-![](mem.png)
+![](https://github.com/hectorartoken/Big-Data-Hector/blob/master/Images/mem.png)
 
 
 ***
@@ -142,7 +142,7 @@ Maintaining larger applications that are either distributed across several nodes
 - **Rank**: Provide the pieces of content that will best answer a searcher's query, which means that results are ordered by most relevant to least relevant.
 
 
-![](crawling.png)
+![](https://github.com/hectorartoken/Big-Data-Hector/blob/master/Images/crawling.png)
 
 *Source: https://moz.com/beginners-guide-to-seo/how-search-engines-operate *
 
@@ -174,7 +174,7 @@ The search engine does indexing and search, and other parts of the application a
 - **Repository**: Search engines are not good at document or data storage. An outside database (Content Management System and/or Relational Database) would better serve this function.
 - **Web Application Server**: The end-user application tools provided by search engines are fine for simple user interfaces, but will likely disappoint for most UI customization tasks. Most users quickly outgrow these tools.
 
-![](diagram.png)
+![](https://github.com/hectorartoken/Big-Data-Hector/blob/master/Images/diagram.png)
 
 *source: https://www.searchtechnologies.com/blog/six-search-engine-commandments *
 
