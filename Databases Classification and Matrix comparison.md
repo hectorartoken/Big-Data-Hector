@@ -1,12 +1,29 @@
-# Databases Classification and Matrix comparison
-
-### Team: Monse Valbuena, Lisette Ruiz, Héctor Hernández
+# DATABASES CLASSIFICATION  
 
 >> Introduction:
-In the following description are three different kinds of usefull databases which are mainly focussed to work with bigdata.
+The following script shows three different types of useful databases which are mainly focused on big data-related work.
 
-# 1. IN-MEMORY DATABASE 
-[**Main memory database or MMDB**](#cabecera1)
+
+
+---
+
+### Team: 
+- Lisette Ruiz: https://github.com/Lisette-Ruiz/Big_Data_Managment_2020/blob/master/Data%20Bases/In_memory_DB.md
+- Monse Valbuena: https://github.com/yamilivalbuena/Big_Data/blob/master/Databases/Search_DB.md 
+- Héctor Hernández: https://github.com/hectorartoken/Big-Data-Hector/blob/master/Time-Series.md
+
+### Content:
+
+- [In-memory databases](#In-memory-databases)
+  * [Matrix](#Matrix-in-memory-databases)
+- [Search-engine databases](#Search-engine-databases)
+  * [Matrix](#Matrix-search-engine-databases)
+- [Time-series databases](#Time-series-databases)
+  * [Matrix](#Matrix-time-series-databases)
+- [References](#References)
+
+# In-memory-databases 
+
 
 ***
 
@@ -60,7 +77,7 @@ An in-memory database system can also act as an read-only analytic database that
 ***
 
 
-## IN-MEMORY DATABASES.
+## MATRIX-IN-MEMORY-DATABASES
 
 Comparation between 4 in-memory databases:
 
@@ -75,25 +92,17 @@ Comparation between 4 in-memory databases:
 **Consistency** | It is networked, in-memory, and stores keys with optional durability. | Functions like a RDBMS (structured data) for fast analytics on datasets in the hundreds of GBs to 10's of TBs range. | Durable, strongly consistent, and highly available with powerful SQL, key-value and processing APIs. | RDBMS Oracle 12c contains an option for in-memory technology (additional licenses required).
 **Platforms** | Written in ANSI C and works in most POSIX systems like Linux, *BSD, OS X. | GPU-Accelerated Database. | Apache is a platform designed to store and compute on large volumes of data across a cluster of nodes. | Make market-leading components (databases, application servers, web servers, which lets customers to implement PeopleSoft on the infrastructure.
 
-*** 
-> ## REFERENCES:
+--- 
 
-- https://aws.amazon.com/es/nosql/in-memory/
-- https://whatis.techtarget.com/definition/in-memory-database
-- https://hazelcast.com/glossary/in-memory-database/
-- https://raima.com/in-memory-database/
 
-***
 
-# 2. SEARCH-ENGINE DATABASE
+# Search-engine-databases
 
 ---
 
 ### What is a search-engine database?
 
 A search-engine database is a type of nonrelational database that is dedicated to the search of data content. Search-engine databases use indexes to categorize the similar characteristics among data and facilitate search capability. Search-engine databases are optimized for dealing with data that may be long, semistructured, or unstructured, and they typically offer specialized methods such as full-text search, complex search expressions, and ranking of search results. 
- 
- https://aws.amazon.com/es/nosql/search/
 
 ---
 
@@ -101,8 +110,6 @@ A search-engine database is a type of nonrelational database that is dedicated t
 
  Search engines deal with data that does not conform to the rigid structural requirements of relation databases. Data for search may be long, semi-structured or unstructured. A search engine is primarily an index and not that great as repository for data storage. Further, the “RDBMS ecosystem” (development tools, processes, techniques, typical approaches to solutions, etc.) are generally not that useful for search engines. 
  
-https://www.forbes.com/sites/metabrown/2018/03/31/get-the-basics-on-nosql-databases-search-engine-databases/#2607f14515b5
-
 ---
 
 ### Features of a search-engine database
@@ -114,9 +121,7 @@ https://www.forbes.com/sites/metabrown/2018/03/31/get-the-basics-on-nosql-databa
 - Geospatial search
 - Distributed search for high scalability
 
-https://db-engines.com/en/article/Search+Engines
-
-***
+---
 ### Use cases
 
 **Text search**
@@ -126,8 +131,6 @@ Search-engine databases can handle full-text search faster than relational datab
 **Logging and analysis**
 
 Maintaining larger applications that are either distributed across several nodes or consist of several smaller applications searching for events in log files can become tedious. Search-engine databases can handle the logging more efficiently. You can centralize your logs from different applications by indexing them using a search-engine database. For example you can see the logs of your Apache web server combined with the log files of your application server. Because all the information is available in real time, you can implement a visual representation of what is happening in your system in real time, which can help you to find problems more quickly. 
-
-https://aws.amazon.com/es/nosql/search/
 
 ---
 
@@ -140,6 +143,8 @@ https://aws.amazon.com/es/nosql/search/
 
 
 ![](crawling.png)
+
+*Source: https://moz.com/beginners-guide-to-seo/how-search-engines-operate *
 
 ---
 
@@ -159,8 +164,6 @@ Search engines process and store information they find in an index, a huge datab
 
 When someone performs a search, search engines scour their index for highly relevant content and then orders that content in the hopes of solving the searcher's query. This ordering of search results by relevance is known as ranking. In general, you can assume that the higher a website is ranked, the more relevant the search engine believes that site is to the query.
 
-https://moz.com/beginners-guide-to-seo/how-search-engines-operate
-
 ---
 
 ### Integration of a search engine 
@@ -173,7 +176,10 @@ The search engine does indexing and search, and other parts of the application a
 
 ![](diagram.png)
 
-## SEARCH-ENGINES
+*source: https://www.searchtechnologies.com/blog/six-search-engine-commandments *
+
+---
+## Matrix-search-engine-databases
 
 |            |Elasticsearch | Solr | Sphinix |
 |----------- |--------------|------|---------|
@@ -188,8 +194,10 @@ The search engine does indexing and search, and other parts of the application a
 |API language|HTTP|HTTP|If Sphinx run as a stand-alone server, it is possible to use SphinxAPI to connect an application to it.|
 |Features|Data rollups, index lifecycle management, Distributed search, Multi-tenancy, An analyzer chain, Analytical search, Grouping & aggregation|Full-text search, hit highlighting, faceted search, real-time indexing, dynamic clustering, database integration, NoSQL features and rich document (e.g., Word, PDF) handling|Batch and incremental (soft real-time) full-text indexing, Support for non-text attributes (scalars, strings, sets, JSON), Direct indexing of SQL databases. Native support for MySQL, MariaDB,PostgreSQL, MSSQL, plus ODBC connectivity, XML document indexing support, Full-text searching syntax, Database-like result set processing, Relevance ranking utilizing additional factors besides standard BM25|
 
+---
+---
 
-# 3. Time Series
+# Time-series-databases
 
 ## Introduction 
 
@@ -217,6 +225,8 @@ We can divide the Time Series Databases in 3 categories:
 
 **Understand past**: Understand past data with a purpose-built database.
 
+---
+
 ## Who uses Time Series?
 
 **Database administrators**: Time series databases have grown in popularity since they are easier to implement, have greater flexibility, and tend to have 
@@ -224,6 +234,8 @@ faster data retrieval times. Database administrators use these tools to maintain
 
 **Data scientists**: As data science, including artificial intelligence, is fueled by data, it is key that this data is stored in the most effective and 
 efficient manner. This ensures that the data can be queried and analyzed properly.
+
+---
 
 ## Kinds of Time Series Database Software
 
@@ -234,6 +246,8 @@ critical to business operations. They are highly scalable and can be stored on-p
 **NoSQL databases**: NoSQL databases such as graph databases are a great option for unstructured data. If the user needs to render a value that is easily found 
 by its key, then a key-value store is the fastest and most scalable. The drawback is a much more limited querying ability, implying its limitations for 
 analytic data. Conversely, rendering a user’s email address based on the username or caching web data is a simple and fast solution in a key-value store.
+
+---
 
 ## Time Series Features
 
@@ -251,17 +265,17 @@ even by a fraction of a second.
 **Recovery**: Whether a database needs to be rolled back or outrightly recovered, some time series database solutions offer recovery features in the event any 
 errors occur.
 
+---
+
 ## Relationship to Big Data
 
 Data has become the backbone of conducting business in the information age. As data drives business decisions and trends, it’s important that the data be 
 digestible, easy to follow, and easy to reference. That’s why big data software mostly falls back on relational database solutions. Designed with strict organization, 
 referencing, and referral in mind, relational databases absorb and store massive amounts of data to be later digested in the decision-making process.
 
+---
 
-All this information was extracted from [Best Time Series Databases Software](https://www.g2.com/categories/time-series-databases?utf8=%E2%9C%93&order=popular)
-
-
-# Time-Series Databases
+# Matrix-time-series-databases
 
 Comparation between 5 Time-Series databases:
 
@@ -274,3 +288,24 @@ Databases/Attributes | Amazon Timestream            | DataStax                  
 **Ease of Use** | 8.0 | 7.9 | 9.0 | 7.8 | 5.0 |
 **Case of Use** | DevOps, Applications of IoT, Application Monitoring, Industrial Telemetry | Hybrid and Multi-cloud, Microservices, System Modernization, Streaming IoT, Analytics | Deep insights and analytics | Storage, visualizations, Integrations with Docker, HaProxy, StatsD and JMX metrics | import and export databases, Remote connectors with Grafana, Kafka, Spark, Excel and  Prometehus, APIs consults |
 **Supoort** | Amazon web service | Apache Cassandra | Open Source | Open Source or Cloud Native | SQL |
+
+## References
+
+*In-memory databases*
+
+- https://aws.amazon.com/es/nosql/in-memory/
+- https://whatis.techtarget.com/definition/in-memory-database
+- https://hazelcast.com/glossary/in-memory-database/
+- https://raima.com/in-memory-database/
+
+*Search-engine databases*
+
+- https://aws.amazon.com/es/nosql/search/
+- https://www.forbes.com/sites/metabrown/2018/03/31/get-the-basics-on-nosql-databases-search-engine-databases/#2607f14515b5
+- https://db-engines.com/en/article/Search+Engines
+- https://moz.com/beginners-guide-to-seo/how-search-engines-operate
+- https://www.searchtechnologies.com/blog/six-search-engine-commandments
+
+*Time-series databases*
+
+- https://www.g2.com/categories/time-series-databases?utf8=%E2%9C%93&order=popular
