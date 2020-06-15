@@ -1,8 +1,11 @@
 # Databases Classification and Matrix comparison
 
-# Team: Monse Valbuena, Lisette Ruiz, Héctor Hernández
+### Team: Monse Valbuena, Lisette Ruiz, Héctor Hernández
 
-# IN-MEMORY DATABASE 
+>> Introduction:
+In the following description are three different kinds of usefull databases which are mainly focussed to work with bigdata.
+
+# 1. IN-MEMORY DATABASE 
 [**Main memory database or MMDB**](#cabecera1)
 
 ***
@@ -72,8 +75,17 @@ Comparation between 4 in-memory databases:
 **Consistency** | It is networked, in-memory, and stores keys with optional durability. | Functions like a RDBMS (structured data) for fast analytics on datasets in the hundreds of GBs to 10's of TBs range. | Durable, strongly consistent, and highly available with powerful SQL, key-value and processing APIs. | RDBMS Oracle 12c contains an option for in-memory technology (additional licenses required).
 **Platforms** | Written in ANSI C and works in most POSIX systems like Linux, *BSD, OS X. | GPU-Accelerated Database. | Apache is a platform designed to store and compute on large volumes of data across a cluster of nodes. | Make market-leading components (databases, application servers, web servers, which lets customers to implement PeopleSoft on the infrastructure.
 
+*** 
+> ## REFERENCES:
 
-# SEARCH-ENGINE DATABASE
+- https://aws.amazon.com/es/nosql/in-memory/
+- https://whatis.techtarget.com/definition/in-memory-database
+- https://hazelcast.com/glossary/in-memory-database/
+- https://raima.com/in-memory-database/
+
+***
+
+# 2. SEARCH-ENGINE DATABASE
 
 ---
 
@@ -177,7 +189,7 @@ The search engine does indexing and search, and other parts of the application a
 |Features|Data rollups, index lifecycle management, Distributed search, Multi-tenancy, An analyzer chain, Analytical search, Grouping & aggregation|Full-text search, hit highlighting, faceted search, real-time indexing, dynamic clustering, database integration, NoSQL features and rich document (e.g., Word, PDF) handling|Batch and incremental (soft real-time) full-text indexing, Support for non-text attributes (scalars, strings, sets, JSON), Direct indexing of SQL databases. Native support for MySQL, MariaDB,PostgreSQL, MSSQL, plus ODBC connectivity, XML document indexing support, Full-text searching syntax, Database-like result set processing, Relevance ranking utilizing additional factors besides standard BM25|
 
 
-# Time Series
+# 3. Time Series
 
 ## Introduction 
 
