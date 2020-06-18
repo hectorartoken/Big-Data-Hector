@@ -94,4 +94,4 @@ which means using different programming languages to build an application.
 
 10. What is cypher?
 
-Cypher is a declarative query language for property graphs, created for the Neo4j graph database
+Cypher is a declarative query language for property graphs, created for the Neo4j graph database.
