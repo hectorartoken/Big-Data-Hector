@@ -95,3 +95,41 @@ which means using different programming languages to build an application.
 10. What is cypher?
 
 Cypher is a declarative query language for property graphs, created for the Neo4j graph database.
+
+# CHAPTER 3
+## Storage and Retrieval
+
+1. What meaning does the book use for *log*?
+
+The book used is as an append-only sequence of records
+
+2. We have the next functio for a database:
+``` bash
+db_get(){
+	grep "^$1," database | sed -e "s/^$1,//" | tail -n 1
+}
+```
+
+What is the problem of that function?
+
+The function has a terrible performance if you have a large number of records in your database.
+
+3. Taking the above function, What is its running-time?
+
+O(n).
+
+4. What is a Bloom Filter and its is benefy?
+
+It's a a memory-efficient data structure for approximating the contents of a set. It can tell you if a key does 
+not appear in the database, and thus saves many unnecessary disk reads for non-existent keys.
+
+5. Acoording to the book, what is compaction?
+
+Compactions means throwing away duplicate keys in the log, and keeping only the most recent update for each key.
+
+6. Why is common used the Heap File?
+
+Because because it avoids duplicating data when multiple secondary indexes are present: each index just references 
+a location in the heap file, and the actual data is kept in one place.
+
+
