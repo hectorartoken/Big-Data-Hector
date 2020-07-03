@@ -132,4 +132,67 @@ Compactions means throwing away duplicate keys in the log, and keeping only the 
 Because because it avoids duplicating data when multiple secondary indexes are present: each index just references 
 a location in the heap file, and the actual data is kept in one place.
 
+# CHAPTER 4
+
+## Enconding and Evolution
+
+1. What are the directions to keep a system running with old and new code? 
+
+* **Backward compatibility**: Newer code can read data that was written by older code.
+
+* **Forward compatibility**: Older code can read data that was written by newer code.
+
+2. What manipulates and optimizes for efficiency the following data structure: objects, structs, lists, arrays, hash tables, trees, etc?
+
+The CPU
+
+3. What is the meaning of *serialization* in the context of transactions?
+
+Serializability of transaction refers the sequence of actions such as read, write, abort, commit are performed in such a way that it seems 
+like the transaction are performed in some serial manner.
+
+4. Mention some problems that have the encoding libraries...
+
+* Reading the data in another language is very difficult.
+
+* The store or transmit data in an encoding.
+
+* Restore data in the same object types.
+
+* They have probelms with the efficiency.
+
+5. What are the standardized encodings that can be written and read by many programming languages?
+
+* JSON
+
+* XML
+
+6. What is the **Binary encoding**?
+
+Binary encoding uses the binary digit, or bit, as the fundamental unit of information, and a bit may only be a ‘0’ or a ‘1’ 
+(only two possibilities since it is a binary-encoded system).
+
+7. How this binary serialization deals with APIs?
+These APIs are naturally verbose and do not match very well against common language patterns, becuase they are machine-written and not human-written, 
+but they work well enough.
+
+8. What are the Thrift and Protocol Buffers?
+
+Apache Thrift and Protocol Buffers are binary encoding libraries that are based on the same principle.  Protocol Buffers was originally developed at Google, 
+Thrift was originally developed at Facebook, and both were made open source in 2007–08.
+
+9. How does work the accessing a data base at the same time?
+
+* The writing process: This may be written a newer versions of the code which is being update in the moment of the code running and some will be runing older code.
+
+* The reading process: This is like a batch which reads the older version of the codad that is still running.
+
+10. What is Data Flow?
+
+Data flow is how data flows through your system. It involves thinking about data usage patterns, application boundaries, and similar such things.
+
+
+
+
+
 
