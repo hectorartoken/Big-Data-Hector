@@ -191,8 +191,72 @@ Thrift was originally developed at Facebook, and both were made open source in 2
 
 Data flow is how data flows through your system. It involves thinking about data usage patterns, application boundaries, and similar such things.
 
+# CHAPTER 5
 
+## Replication
 
+1. What is refered as a shared-memory architecture?
 
+Join many CPUs, RAM chips and disks together under one operating system, and a fast interconnect that allows any CPU to access any part of memory or disk.
 
+2. What is the shared-nothing architectures approach?
+
+In this approach, each machine or virtual machine running the database software is called a node. Each node uses uses its CPUs, RAM and disks independently. 
+Any coordination between nodes is done at the software level, using a conventional network. No special hardware is required by a shared-nothing system and 
+it can potentially distribute data across multiple geographic regions, and thus reduce latency for users and potentially be able to survive the loss of an 
+entire datacenter.
+
+3. What does guarantee read-your-writes-consistency?
+
+It guarantee that if the user reload the page, they will always seen any updates they submmited themselves but not promises about the other users.
+
+4. Why is better to used Multi-leader configurations than single-leader?
+
+* Performance: Every write can be processed in the local datacenter and is replicated asynchronously to other datacenters.
+
+* Tolerance of datacenter outages: It allows each datacenter can continue operating idenpendently of the others.
+
+* Tolerance of networks problems: It uses asynchronous replication can usually tolerate newtwork problems.
+
+5. What happens in reality when you implement synchronous replication?
+
+In practice, if you enable synchronous replication on a database, it usually means that one of the followers is synchronous, and the others are asynchronous. 
+If the synchronous follower becomes unavailable or slow, one of the asynchronous followers is made synchronous. This configuration is sometimes also 
+called semi-synchronous
+
+6. How do we differentiate synchronous replication from the asynchronous?
+
+For example, when replication is synchronous, the leader waits until followers have confirmed that they received the write before reporting success to the user. 
+When the leader sends the message, but doesn’t wait for a response from the follower is asynchronous replication.
+
+7. How do you achieve high availability with leader-based replication?
+
+* Follower failure: Catch-up recovery: On its local disk, each follower keeps a log of the data changes it has received from the leader. If a follower crashes 
+and is restarted, or if the network between the leader and the follower is temporarily interrupted, the follower can recover quite easily: from its log, 
+it knows the last transaction that was processed before the fault occurred.
+
+* Leader failure: Failover, one of the followers needs to be promoted to be the new leader, clients need to be reconfigured to send their writes to the new leader, 
+and the other followers need to start consuming data changes from the new leader.
+
+8. What is and in what case would you want to provide cross-device read-after-write consistency?
+
+If the user enters some information on one device and then views it on another device, they should see the information they just entered
+When the same user is accessing your service from multiple devices, for example a desktop web browser and a mobile app.
+
+9. What is a sloppy quorum?
+
+In a large cluster (with significantly more than n nodes) it’s likely that the client can connect to some database nodes during the network interruption, 
+just not to the nodes that it needs to assemble a quorum for a particular value.
+
+10. What is Trigger-based replication?
+
+To implement trigger-based replication, use event triggers stored in the database. When an event to be replicated occurs 
+(that is, a record is created, modified, or deleted) the database uses the event to record the change in a replication change log. ABL (Advanced Business Language) 
+provides full support for trigger-based replication.
+
+# CHAPTER 6
+
+## Partitioning
+
+1. 
 
