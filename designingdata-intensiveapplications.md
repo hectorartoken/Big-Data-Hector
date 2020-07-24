@@ -296,3 +296,7 @@ can overload the network or the nodes and harm the performance of other requests
 
 For that reason, it can be a good thing to have a human in the loop for rebalancing. 
 It’s slower than a fully automatic process, but it can help prevent operational surprises
+
+# CHAPTER 7
+
+## Transactions
