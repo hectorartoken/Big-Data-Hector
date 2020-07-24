@@ -258,5 +258,41 @@ provides full support for trigger-based replication.
 
 ## Partitioning
 
-1. 
+1. How many partitions are made using the hash partitioning method?
 
+Using this approach, it is common to create a fixed number of partitions in advance, to assign several partitions 
+to each node. It also moves entire partitions from one node to another when nodes are added or removed. 
+A variant on here is the Dynamic partitioning.
+
+2. What is the problem that comes with partitioning your data?
+
+You always have to choose a partitioning schema that is appropriate and that fits with your data, 
+and rebalancing the partitions when nodes are added to or removed from the cluster.
+
+3. What is skewed and hot spot?
+
+* To have some partitions that have more data or queries than others.
+* To have partitions with disproportionately high load.
+
+4. What are skewed workloads?
+
+Some partitions that have more data or queries than others. The presence of skew makes partitioning much less effective. 
+In an extreme case, all the load could end up on one partition, so 9 out of 10 nodes are idle and your bottleneck is the single busy node.
+
+5. What is rebalancing and why is it used for?
+
+The process of moving load from one node in the cluster to another. And it's use for:
+
+* For the load (data storage, read and write requests) to be shared fairly between the nodes in the cluster.
+* The database continue accepting reads and writes.
+* No more data than necessary should be moved between nodes, to make rebalancing fast and to minimize the network and disk I/O load.
+
+6. What are some considerations of automated rebalancing?
+
+Fully automated rebalancing can be convenient, because there is less operational work to do for normal maintenance. 
+However, it can be unpredictable. Rebalancing is an expensive operation, because it requires rerouting 
+requests and moving a large amount of data from one node to another. If it is not done carefully, this process 
+can overload the network or the nodes and harm the performance of other requests while the rebalancing is in progress.
+
+For that reason, it can be a good thing to have a human in the loop for rebalancing. 
+It’s slower than a fully automatic process, but it can help prevent operational surprises
