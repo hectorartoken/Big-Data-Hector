@@ -300,3 +300,49 @@ It’s slower than a fully automatic process, but it can help prevent operationa
 # CHAPTER 7
 
 ## Transactions
+
+1. What is the functionality of a transaction?
+
+It's an application to group several reads and writes together into a logical unit.
+And take the next operations: 
+* commit: The entire transaction succeeds 
+* Abort and rollback: It fails
+
+2. What is the context of safety guarantees?
+
+Transaction has the posibility that the application to ignore certain potential error scenarios and concurrency issues.
+
+3. What is ACID consistency?
+
+The idea of ACID consistency is that you have certain statements about your data (invariants) that must always be true.
+
+4. Metion some different for replication logs methods.
+
+* Statement-based replication: the leader logs every write request (statement) that it executes and sends that statement log to its followers.
+
+* Write-ahead log (WAL) shipping: the log is an append-only sequence of bytes containing all writes to the database. 
+
+* Logical (row-based) log replication: use different log formats for replication and for the storage engine, 
+which allows the replication log to be decoupled from the storage engine internals.
+
+5. What is hinted handoff?
+
+Once the network interruption is fixed, any writes that one node temporarily accepted on behalf of another node are sent to the appropriate “home” nodes.
+
+6. What is snapshot isolation?
+
+The trans‐ action sees all the data that was committed in the database at the start of the transaction,  
+each transaction sees only the old data from that particular point in time.
+
+7. What is non-repeatable read?
+
+It's the fact that one data is late and not update so fast, and when you do a query you would see inconsistencies in that moment, 
+but wainting for a time and requesting again it would show the information correctly.
+
+8. What are skewed workloads?
+
+Some partitions that have more data or queries than others. The presence of skew makes partitioning much less effective. 
+
+
+
+
